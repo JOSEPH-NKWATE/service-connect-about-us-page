@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Service Connect</title>
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head> 
+  <body>
+    <div class="about-us">
+      <div class="container">
+        <div class="row">
+          <div class="flex">
+            <h2>About Us</h2>
+            <h3>Discover Our Team's Story</h3>
+            <p>At Service Connect, we believe in bringing the world closer by connecting people with the services they need. Whether you’re looking for a language tutor, a skilled plumber, an experienced electrician, or a compassionate caregiver, our platform is designed to make finding the right service provider effortless and secure.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+          <div class="flex">
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <img src="images/slide1.jpg" style="width:100%">
+                <div class="text">Service Connect</div>
+              </div>
+              <div class="mySlides fade">
+                <img src="images/slide2.jpg" style="width:100%">
+                <div class="text">Service Connect</div>
+              </div>
+              <div class="mySlides fade">
+                <img src="images/slide3.jpg" style="width:100%">
+                <div class="text">Service Connect</div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 0.5 seconds
+      }
+
+      function plusSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        slideIndex += n;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        if (slideIndex < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
